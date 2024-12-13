@@ -51,5 +51,5 @@ Puedes ver la página web en vivo en el siguiente enlace: [Yiye's](https://yulei
 ---
 
 *Creado por: Lisbeth Nohemi Jimenez Lopez, Carlos Omar Ramirez Terwogt, Yuleidith Denisse Oliva Reyes
-*GitHub*: [jimloxc9912](https://github.com/jimloxc9912) / [SunEatee002](https://github.com/SunEatee002) / [yuleiditho](https://github.com/yuleiditho)
+*GitHub*: [jimloxc9912](https://github.com/jimloxc9912) / [SunEatee002](https://github.com/SunEater002) / [yuleiditho](https://github.com/yuleiditho)
 
