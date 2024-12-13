@@ -17,7 +17,7 @@ El diseño de la página se inspiró en la página web **La Divinata**, dándole
 
 1. *Clona este repositorio:*
     ```
-    git clone https://github.com/yuleiditho/BakeryProject.git
+    git clone [https://github.com/yuleiditho/BakeryProject.git](https://github.com/yuleiditho/Project_M2_DevBecalos.git)
     ```
     
 
