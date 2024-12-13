@@ -1,6 +1,6 @@
 # BakeryProject Yiye's
 
-Proyecto de un landing de una tienda de repostería 
+Proyecto de un landing page de una tienda de repostería 
 
 ## Descripción
 
