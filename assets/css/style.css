@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --green-main: rgb(180, 233, 142);
+    --green-title:  rgb(74, 120, 41);
+    --green:rgb(156, 185, 137);
+    --red-btn:rgb(158, 40, 43);
+    --red: #CC231E;
+    --orange: #F5624D;
+    --marine: #235E6F;
+    --fondo: rgb(28, 28, 33);
+    --footer-section:rgb(220, 224, 197);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+h1, a{
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    background-color: var(--fondo);
+}
+
+section{
+    padding: 2rem 9%;
+    padding-top: 10rem;
+    
+}
+
+
+body .sky {
+    position: relative;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+.sky {
+    height: 100%;
+    color: #FFF;
+    display: block;
+}
+
+header{
+    position: fixed;
+    top: 0; left:0; right:0;
+    background: var(--fondo);
+    padding: 2rem 9%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+header ul,li,a{
+    list-style: none;
+}
+
+header .top-row  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 65.8%;
+}
+
+.search-icon{
+    font-size: 2.1rem;
+    color: var(--green-main);
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.search-icon:is(:hover,:active){
+    color: #fff;
+    font-size: 2.2rem;
+    cursor:pointer;
+}
+
+.icons a{
+    margin: 0 1rem;
+    font-size: 2.1rem;
+    color: var(--green-main);
+    cursor:pointer;
+}
+
+.icons a:is(:hover,:active){
+    color: #fff;
+    font-size: 2.2rem;
+    cursor:pointer;
+}
+
+.fas.fa-bars, .fa.fa-times{
+    font-size: 3rem;
+    color: var(--green);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    display: none; 
+    cursor: pointer;
+    left: 20px;
+}
+
+header .navbar{
+    margin-top: 1rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    padding-left: 6.5rem; /* adjust this value to match your logo's width */
+    font-size: 3rem;
+    color: var(--green-main);
+    font-weight: bold;
+    justify-content: center;
+}
+
+header .logo span{
+    justify-content: center;
+}
+
+header .navbar a{
+    font-size: 1.5rem;
+    color: var(--green);
+    padding: 0 1.5rem;
+}
+
+.navbar span:is(:hover, :active){
+    color: var(--green-main);
+    border-bottom: 1px solid var(--green-main);
+}
+
+.header-user{
+    display: none;
+}
+video{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* Mantener la altura fija de 480px para el video */
+.slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 480px; /* Altura fija del video */
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px; /* Asegura que el video esté debajo del header */
+}
+
+.video-overlay{
+    position: absolute;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+/* Aseguramos que el video ocupe todo el contenedor y mantenga su aspecto */
+.video-home {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene el aspecto del video */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Asegura que el contenido esté por encima del video */
+    width: 100%;
+}
+
+.slide-content h1{
+    margin-bottom: 1rem;
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.slide-content span{
+    line-height: 1.5;
+    font-size: 5.8rem;
+}
+
+.slide-content p{
+    font-size: 1.75rem;
+    margin-bottom: 6.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-products {
+    padding: 1.5rem 2rem;
+    background-color: var(--red-btn);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-products:is(:hover,:active) {
+    background-color: var(--red);
+}
+
+.home{
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 0;
+    z-index: 1;      
+}
+
+.title-home{
+    color: rgb(186, 222, 160);
+    font-size: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.title-section{
+    color: rgb(186, 222, 160);
+    font-size: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.title-section.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajustar la galería */
+.gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.item h2 {
+    padding: 40px 20px 10px;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.hidden-text {
+    color: #fff;
+    position: relative;
+    overflow: hidden; /* Para evitar desbordes */
+    max-height: 0; /* Inicialmente oculto */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease; /* Transición suave */
+    opacity: 0; /* Inicialmente oculto */
+}
+
+.hidden-text h3{
+    width: 400px;
+    padding: 15px 0 0 20px;
+    font-size: 2.5rem;
+}
+
+.hidden-text p{
+    width: 400px;
+    text-align: left;
+    padding: 15px 0 0 20px;
+    font-size: 1.5rem;
+}
+
+.hidden-text strong{
+    color: var(--green-main);
+}
+
+.item {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: flex 1s ease;
+    z-index: 1;
+}
+
+.item:hover {
+    flex: 2;
+}
+
+.item:hover .hidden-text {
+    max-height: 200px; /* Ajusta esto al tamaño que desees para el texto visible */
+    opacity: 1; /* Se hace visible */
+}
+
+.item h2, .item .hidden-text {
+    position: relative;
+    z-index: 1;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura */
+    z-index: 0;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.item:hover .hidden-text p,
+.item:hover .hidden-text h3{
+    transition: transform 0.01s ease; /* Suaviza el escalado del contenido */
+} 
+
+.products{
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.products.active{
+    display: flex;
+}
+
+
+.img-deco{
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal de la galería */
+.gallery-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 0;
+    padding-bottom: 0;  
+}
+
+.center-gallery{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-container {
+    margin:0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+/* Elemento Flex (cada tarjeta de producto) */
+.flex-item {
+    display: flex;
+    flex-direction: column; /* Imagen y texto en columna */
+    align-items: center; /* Centra contenido horizontalmente */
+    width: 250px;
+    border: 1px solid rgb(33, 19, 13);
+    border-radius: 10px;
+    background-color: rgb(28, 28, 33);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en las tarjetas */
+.flex-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagenes dentro de la tarjeta */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.image-default,
+.image-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.flex-item:hover .image-hover {
+    opacity: 1;
+}
+
+.flex-item:hover .image-default {
+    opacity: 0;
+}
+
+/* Información del producto */
+.info {
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(28, 28, 33);
+}
+
+.title-product{
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+    color: var(--green);
+    display: inline-block;
+    transition: border-bottom-color 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.title-product:is(:hover,:active){
+    border-bottom-color: var(--green);
+}
+
+.rating {
+    font-size: 16px;
+    color: #f39c12;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.price span {
+    color: var(--green-main);
+    font-weight: bold;
+}
+
+.discount-badge{
+    position: absolute;
+    width: 100%;
+    top: 0; left: 0;
+    background-color: #00000096;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.discount-badge span{
+    font-size: 22px;
+}
+
+.btn-container{
+    margin-top: 2.5rem;
+}
+
+.btn-all {
+
+    padding: 1rem 1rem;
+    background-color: var(--green-title);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transition: padding 0.05s ease;
+    font-weight: 600;
+}
+
+.btn-all:is(:hover,:active) {
+    background-color: var(--green);
+}
+
+
+@media (max-width: 1600px) {
+    .slide-content h1 {
+        font-size: 4.5rem;
+    }
+    .slide-content span {
+        font-size: 4.8rem;
+    }
+    .slide-content p {
+        font-size: 1.48rem;
+    }
+    header .navbar a {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1495px) {
+    .slides {
+        height: 400px;
+    }
+    .slide-content h1 {
+        font-size: 4rem;
+    }
+    .slide-content span {
+        font-size: 4.5rem;
+    }
+    .slide-content p {
+        font-size: 1.4rem;
+    }
+    header .navbar ul {
+        display: flex;
+    }
+    header .navbar a {
+        font-size: 1.28rem;
+    }    
+    .newsletter-container{
+        display: none;
+    }
+}
+
+@media (max-width: 1490px) { 
+    .newsletter-container{
+        display: none;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    header{
+        margin: 0;
+        padding: 0;
+        background: rgba(54, 79, 39, 0.527);
+    }
+    .slides{
+        margin: 0;
+        padding-top: -60px;
+    }
+    .slides {
+        height: 350px;
+    }
+    .slide-content h1 {
+        padding-top: 2rem;
+        font-size: 3.5rem;
+    }
+    .slide-content span {
+        font-size: 3rem;
+    }
+    .slide-content p {
+        font-size: 1.3rem;
+        padding: 0 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .btn-products {
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .fas.fa-bars, .fas.fa-times {
+        display: block;
+        position: absolute;
+        left: 20px; 
+        font-size: 3rem;
+        color: var(--green);
+        border-radius: .5rem;
+        padding: .5rem 1.5rem;
+    }
+
+    .navbar{
+        position: relative;
+        top: 0;
+        right: 190px;
+        width: 50%;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(34, 41, 34, 0.747);
+    }
+
+    .navbar ul {
+        margin: 30px 30px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar a span{
+        font-weight: 600;
+    }
+
+    .newsletter-container{
+        display: none;
+    }
+    
+ 
+}
+
+
+@media (max-width: 528px) {
+    body{
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .slides{
+        margin: 0;
+        padding-top: -60px;
+    }
+    header{
+        margin:0;
+        padding: 0;
+        background: rgba(54, 79, 39, 0.527);
+    }
+   
+    header .fa-user{
+        display: none;
+    }
+
+    header .fa-search{
+        padding-right: 20px;
+        color: rgba(54, 79, 39, 0.164);
+    }
+   
+    header .top-row{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    header .top-row a.logo{
+        margin:0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+
+    header .top-row .fa-shopping-bag{
+        margin: 0;
+        padding-right: 20px;
+    }
+
+    .fas.fa-bars, .fas.fa-times {
+        display: block;
+        position: absolute;
+        left: 0;
+        font-size: 3rem;
+        color: var(--green);
+        border-radius: .5rem;
+        padding: .5rem 1.5rem;
+    }
+
+
+    .navbar{
+        position: relative;
+        top:0;
+        right: 92px;
+        width: 50%;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(34, 41, 34, 0.747);
+    }
+
+    .navbar ul {
+        margin: 30px 30px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a span{
+        font-weight: 600;
+    }
+    
+    main .slide-content p{
+        display: none;
+    } 
+    .slide-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide-content h1{
+        margin: 80px 10px 0;
+        font-size: 30px;
+    }
+    .slide-content span{
+        margin: 10px;
+    }
+
+    .title-home{
+        font-size: 30px;
+    }
+
+    .item h2{
+        padding-right: 15px;
+        font-size: 20px;
+        height: 80%;
+        writing-mode: vertical-rl;
+        transform: scale(-1);
+    }
+
+    .hidden-text *{
+        display: none;
+    }
+
+    .title-section{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .newsletter-container{
+        display: none;
+    }
+
+}
+
+
+.navbar.show {
+    display: flex;
+    background: rgba(34, 41, 34, 0.747);
+    
+}
+
