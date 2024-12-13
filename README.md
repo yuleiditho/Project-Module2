@@ -33,7 +33,7 @@ El diseño de la página se inspiró en la página web **La Divinata**, dándole
 ## Autores
 
 - *Lisbeth Nohemi Jimenez Lopez* - GitHub: [jimloxc9912](https://github.com/jimloxc9912)
-- *Carlos Omar Ramirez Terwogt* - GitHub: [SunEatee002](https://github.com/SunEatee002)
+- *Carlos Omar Ramirez Terwogt* - GitHub: [SunEatee002](https://github.com/SunEater002)
 - *Y. Denisse Oliva* - GitHub: [yuleiditho](https://github.com/yuleiditho)
 
 ## Licencia
